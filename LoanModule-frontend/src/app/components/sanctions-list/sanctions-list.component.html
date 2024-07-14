@@ -1,0 +1,34 @@
+
+<!-- 
+<input type="text" [(ngModel)]="date"> -->
+<h2> LoanApplication List</h2>
+<table class = "table table-striped" border="2">
+    <thead>
+        <tr>
+            <th>loanAppId</th>
+            <th>custId</th>
+            <th>loanAmt</th>
+            <th>noOfYears</th>
+            <th>purpose</th>
+            <th>appStatus</th>
+            <th>typeOfLoan</th>
+            <th>loanAppDate</th>
+            <th>status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let i of loanApplication">
+            <td>{{i.loanAppId}} </td>
+            <td>{{i.custId}}</td>
+            <td>{{i.loanAmt}}</td>
+            <td>{{i.noOfYears}}</td>
+            <td>{{i.purpose}}</td>
+            <td>{{i.appStatus}}</td>
+            <td>{{i.typeOfLoan}}</td>
+            <td>{{i.loanAppDate}}</td>
+            <td>{{i.status}}</td>
+            <td><button (click)="view(i.loanAppId)">View</button></td>
+        </tr>
+    </tbody>
+</table>

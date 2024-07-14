@@ -1,0 +1,100 @@
+<!-- <div class="formbold-form-wrapper">
+    <form>
+        <div class="formbold-input-flex">
+            <div>
+                <input type="text" name="loanAppId" id="loanAppId" placeholder="L1XXX" class="formbold-form-input"
+                [(ngModel)]="Loan.principleAmount"     />
+                <label for="loanAppId" class="formbold-form-label">Principle Amount</label>
+            </div>
+            <div>
+                <input type="text" name="purpose" id="purpose" placeholder="XXXXX" class="formbold-form-input"
+                [(ngModel)]="Loan.loanTenureMonths"    />
+                <label for="purpose" class="formbold-form-label"> Loan Tenure(In months) </label>
+            </div>
+        </div>
+
+        <div class="formbold-input-flex">
+            <div>
+                <input type="text" name="loanAmt" id="loanAmt" placeholder="50XXXXX" class="formbold-form-input"
+                 [(ngModel)]="Loan.monthlyInterestRate"   />
+                <label for="loanAmt" class="formbold-form-label"> Monthly Interest Rate </label>
+            </div>
+            <div>
+                <input type="text" name="loanAmt" id="loanAmt" placeholder="50XXXXX" class="formbold-form-input"
+                 [(ngModel)]="Loan.dueDate"   />
+                <label for="loanAmt" class="formbold-form-label">Due Date</label>
+            </div>
+        </div>
+        <button class="formbold-btn">
+            Submit
+        </button>
+        <div class="formbold-input-flex output">
+            <div>
+                <input type="text" name="loanAmt" id="loanAmt" placeholder="50XXXXX" class="formbold-form-input"
+                    />
+                <label for="loanAmt" class="formbold-form-label"> Monthly EMI </label>
+            </div>
+            <div>
+                <input type="text" name="loanAmt" id="loanAmt" placeholder="50XXXXX" class="formbold-form-input"
+                    />
+                <label for="loanAmt" class="formbold-form-label">Total Amount(with interest)</label>
+            </div>
+        </div>
+    </form>
+</div> -->
+
+<div class="formbold-form-wrapper">
+    <form [formGroup]="emiform" #inputForm="ngForm" (ngSubmit)="onSubmit(inputForm.value)">
+        <div class="formbold-input-flex">
+            <div>
+                <div *ngIf="emiform.get('principleAmount')?.invalid && (emiform.get('principleAmount')?.dirty || emiform.get('principleAmount')?.touched)" class="error-message">
+                    <div *ngIf="emiform.get('principleAmount')?.hasError('required')">Field is required.</div>
+                    <div *ngIf="emiform.get('principleAmount')?.hasError('min')">Minimum value 10000</div>
+                    <div *ngIf="emiform.get('principleAmount')?.hasError('max')">Maximum value 999999999</div>
+                  </div>
+                <input type="number" formControlName="principleAmount" id="principleAmount" placeholder="L1XXX" class="formbold-form-input"/>
+                <label for="principleAmount" class="formbold-form-label">Principle Amount</label>
+            </div>
+            <div>
+                <div *ngIf="emiform.get('tenure')?.invalid && (emiform.get('tenure')?.dirty || emiform.get('tenure')?.touched)" class="error-message">
+                    <div *ngIf="emiform.get('tenure')?.hasError('required')">Field is required.</div>
+                    <div *ngIf="emiform.get('tenure')?.hasError('min')">Minimum value 1</div>
+                    <div *ngIf="emiform.get('tenure')?.hasError('max')">Maximum value 999</div>
+                  </div>
+                <input type="number" formControlName="tenure" id="tenure" placeholder="XXX" class="formbold-form-input"/>
+                <label for="tenure" class="formbold-form-label"> Loan Tenure(In months) </label>
+            </div>
+        </div>
+        <div class="formbold-input-flex">
+            <div>
+                <div *ngIf="emiform.get('interestRate')?.invalid && (emiform.get('interestRate')?.dirty || emiform.get('interestRate')?.touched)" class="error-message">
+                    <div *ngIf="emiform.get('interestRate')?.hasError('required')">Field is required.</div>
+                    <div *ngIf="emiform.get('interestRate')?.hasError('min')">Minimum value 1</div>
+                    <div *ngIf="emiform.get('interestRate')?.hasError('max')">Maximum value 9999</div>
+                  </div>
+                <input type="number" formControlName="interestRate" id="interestRate" placeholder="XX" class="formbold-form-input"/>
+                <label for="interestRate" class="formbold-form-label"> Monthly Interest Rate </label>
+            </div>
+            <div>
+                <input type="date" formControlName="dueDate" id="dueDate" class="formbold-form-input"/>
+                <label for="loanAmt" class="formbold-form-label">Due Date</label>
+            </div>
+        </div>
+        <button [class.formbold-btn1]="!emiform.valid" [class.formbold-btn]="emiform.valid">
+            Submit
+        </button>
+        <div class="formbold-input-flex output">
+            <div>
+                <input type="number" name="emi" id="emi" placeholder="XXXXX" class="formbold-form-input"
+                 value="{{emiClacResponse.emi}}"   />
+                <label for="loanAmt" class="formbold-form-label"> Monthly EMI </label>
+            </div>
+            <div>
+                <input type="number" name="totalAmt" id="totalAmt" placeholder="XXXXXXX" class="formbold-form-input"
+                value="{{emiClacResponse.totalAmountPayable}}"     />
+                <label for="loanAmt" class="formbold-form-label">Total Amount(with interest)</label>
+            </div>
+        </div>
+    </form>
+    
+</div>

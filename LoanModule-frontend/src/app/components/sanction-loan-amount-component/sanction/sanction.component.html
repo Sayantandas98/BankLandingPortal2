@@ -1,0 +1,131 @@
+<div class="formbold-main-wrapper">
+    <div class="formbold-form-wrapper">
+      <form>
+          <div class="formbold-input-flex">
+            <div>
+                <input
+                type="text"
+                name="loanAppId"
+                id="loanAppId"
+                placeholder="L1XXX"
+                class="formbold-form-input"
+                disabled
+                [(ngModel)]="loanApplication.loanAppId"
+                />
+                <label for="loanAppId" class="formbold-form-label"> Loan Application ID </label>
+            </div>
+            <div>
+                <input
+                type="text"
+                name="custId"
+                id="custId"
+                placeholder="CALXXX"
+                class="formbold-form-input"
+                [(ngModel)]="loanApplication.custId"
+                disabled
+                />
+                <label for="custId" class="formbold-form-label"> Customer ID </label>
+            </div>
+          </div>
+  
+          <div class="formbold-input-flex">
+            <div>
+                <input
+                type="text"
+                name="loanAmt"
+                id="loanAmt"
+                placeholder="50XXXXX"
+                class="formbold-form-input"
+                [(ngModel)]="loanApplication.loanAmt"
+                disabled
+                />
+                <label for="loanAmt" class="formbold-form-label"> Loan Amount </label>
+            </div>
+            <div>
+                <input
+                type="text"
+                name="noOfYears"
+                id="noOfYears"
+                placeholder="XX"
+                class="formbold-form-input"
+                [(ngModel)]="loanApplication.noOfYears"
+                disabled
+                />
+                <label for="noOfYears" class="formbold-form-label"> No of Years </label>
+            </div>
+          </div>
+          <div class="formbold-input-flex">
+            <div>
+                <input
+                type="text"
+                name="purpose"
+                id="purpose"
+                placeholder="XXXXX"
+                class="formbold-form-input"
+                [(ngModel)]="loanApplication.purpose"
+                disabled
+                />
+                <label for="purpose" class="formbold-form-label"> Purpose </label>
+            </div>
+            <div>
+                <input
+                type="text"
+                name="appStatus"
+                id="appStatus"
+                placeholder="XXXX"
+                class="formbold-form-input"
+                [(ngModel)]="loanApplication.appStatus"
+                disabled
+                />
+                <label for="appStatus" class="formbold-form-label"> Application Status </label>
+            </div>
+          </div>
+          <div class="formbold-input-flex">
+            <div>
+                <input
+                type="text"
+                name="typeOfLoan"
+                id="typeOfLoan"
+                placeholder="XXXXX"
+                class="formbold-form-input"
+                [(ngModel)]="loanApplication.typeOfLoan"
+                disabled
+                />
+                <label for="typeOfLoan" class="formbold-form-label"> Type of Loan </label>
+            </div>
+            <div>
+                <input
+                type="text"
+                name="loanAppDate"
+                id="loanAppDate"
+                placeholder="XXXX"
+                class="formbold-form-input"
+                [(ngModel)]="loanApplication.loanAppDate"
+                disabled
+                />
+                <label for="loanAppDate" class="formbold-form-label"> Loan Application Date </label>
+            </div>
+            <div>
+                <input
+                type="text"
+                name="status"
+                id="status"
+                placeholder="XXXX"
+                class="formbold-form-input"
+                [(ngModel)]="loanApplication.status"
+                disabled
+                />
+                <label for="status" class="formbold-form-label"> Status </label>
+            </div>
+          </div>
+          <div class="formbold-input-flex">
+            <button class="formbold-btn" (click)="sanction()">
+                Sanction
+            </button>
+            <button class="formbold-btn" (click)="reject()">
+                    Reject
+            </button>
+          </div>
+      </form>
+    </div>
+  </div>

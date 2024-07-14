@@ -1,0 +1,92 @@
+<div class="formbold-main-wrapper main">
+    <div>
+        <div class="formbold-input-flex">
+            <div>
+                <input type="text" name="loanAppId" id="loanAppId" placeholder="Loan Application Id"
+                    class="formbold-form-input" [(ngModel)]="fetchData" />
+                <label for="loanAppId" class="formbold-form-label"> Loan Application ID </label>
+            </div>
+            <button class="formbold-btn" (click)="fetch()">
+                view
+            </button>
+        </div>
+    </div>
+    <!-- <div class="middle">
+        hi
+    </div> -->
+    <div class="formbold-form-wrapper">
+        <form (ngSubmit)="onSubmit()">
+            <div class="formbold-input-flex">
+                <div>
+                    <input type="text" name="loanAppId" id="loanAppId" placeholder="L1XXX" class="formbold-form-input"
+                        disabled [(ngModel)]="loanApplication.loanAppId" />
+                    <label for="loanAppId" class="formbold-form-label"> Loan Application ID </label>
+                </div>
+                <div>
+                    <input type="text" name="custId" id="custId" placeholder="CALXXX" class="formbold-form-input"
+                        [(ngModel)]="loanApplication.custId" disabled />
+                    <label for="custId" class="formbold-form-label"> Customer ID </label>
+                </div>
+            </div>
+
+            <div class="formbold-input-flex">
+                <div>
+                    <input type="number" name="loanAmt" id="loanAmt" placeholder="50XXXXX" class="formbold-form-input"
+                        [(ngModel)]="loanApplication.loanAmt" disabled />
+                    <label for="loanAmt" class="formbold-form-label"> Loan Amount </label>
+                </div>
+                <div>
+                    <input type="number" name="noOfYears" id="noOfYears" placeholder="XX" class="formbold-form-input"
+                        [(ngModel)]="loanApplication.noOfYears" disabled />
+                    <label for="noOfYears" class="formbold-form-label"> No of Years </label>
+                </div>
+            </div>
+            <div class="formbold-input-flex">
+                <div>
+                    <input type="text" name="purpose" id="purpose" placeholder="XXXXX" class="formbold-form-input"
+                        [(ngModel)]="loanApplication.purpose" disabled />
+                    <label for="purpose" class="formbold-form-label"> Purpose </label>
+                </div>
+                <div>
+                    <input type="text" name="appStatus" id="appStatus" placeholder="XXXX" class="formbold-form-input"
+                        [(ngModel)]="loanApplication.appStatus" disabled />
+                    <label for="appStatus" class="formbold-form-label"> Application Status </label>
+                </div>
+            </div>
+            <div class="formbold-input-flex">
+                <div>
+                    <input type="number" name="creditScore" id="creditScore" placeholder="0" class="formbold-form-input"
+                        [(ngModel)]="creditScore" disabled />
+                    <label for="creditScore" class="formbold-form-label"> CreditScore </label>
+                </div>
+                <div>
+                    <input type="text" name="basicCheck" id="basicCheck" placeholder="XXXX" class="formbold-form-input"
+                        [(ngModel)]="basicCheck" disabled />
+                    <label for="basicCheck" class="formbold-form-label"> Basic Check </label>
+                </div>
+            </div>
+            <div class="formbold-input-flex">
+                <div>
+                    <input type="text" name="typeOfLoan" id="typeOfLoan" placeholder="XXXXX" class="formbold-form-input"
+                        [(ngModel)]="loanApplication.typeOfLoan" disabled />
+                    <label for="typeOfLoan" class="formbold-form-label"> Type of Loan </label>
+                </div>
+                <div>
+                    <input type="text" name="loanAppDate" id="loanAppDate" placeholder="XXXX"
+                        class="formbold-form-input" [(ngModel)]="loanApplication.loanAppDate" disabled />
+                    <label for="loanAppDate" class="formbold-form-label"> Loan Application Date </label>
+                </div>
+                <div>
+                    <select class="formbold-form-input" [(ngModel)]="loanApplication.status" name="occupation" id="occupation">
+                    <option value="approve">approve</option>
+                    <option value="reject">reject</option>
+                    </select>
+                    <label class="formbold-form-label">Status</label>
+                </div>
+            </div>
+            <button class="formbold-btn">
+                Submit
+            </button>
+        </form>
+    </div>
+</div>

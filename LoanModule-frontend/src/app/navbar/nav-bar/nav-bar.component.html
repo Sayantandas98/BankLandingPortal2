@@ -1,0 +1,23 @@
+<div class="bg-dark main">
+  <div class="container h-100 bg-dark text-white">
+    <div class="row h-100 d-flex justify-content-between align-content-center">
+      <div class="col-2">
+        <a routerLink="" class="text-decoration-none text-white">LoanApplication</a>
+      </div>
+      <div class="col-1">
+        <div class="row gg1">
+          <ng-container *ngIf="signInOut;then signOut else signIn">
+
+          </ng-container>
+          <ng-template #signIn=>
+            <a routerLink="login" class="text-decoration-none text-white">Sign in</a>
+          </ng-template>
+          <ng-template #signOut>
+            <a routerLink="logout" (click)="onClick()" class="text-decoration-none text-white">Sign out</a>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

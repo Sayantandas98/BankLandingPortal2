@@ -1,0 +1,29 @@
+
+
+<!-- <input type="text" [(ngModel)]="date"> -->
+<h2>Repayment Schedule Details</h2>
+<table class = "table table-striped" border="2">
+    <thead>
+        <tr>
+            <th>loanAppId</th>
+            <th>Month no</th>
+            <th>installment</th>
+            <th>interest</th>
+            <th>pOutStandingBeginOfMon</th>
+            <th>pRepayment</th>
+            <th>pOutStandingEndOfMon</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let i of paymentList">
+            <td>{{i.loanappid}} </td>
+            <td>{{i.monthNo}}</td>
+            <td>{{i.installment}}</td>
+            <td>{{i.interest}}</td>
+            <td>{{i.poutStandingBeginOfMon}}</td>
+            <td>{{i.prepayment}}</td>
+            <td>{{i.poutStandingEndOfMon}}</td>
+        </tr>
+    </tbody>
+</table>
+&nbsp;

@@ -1,0 +1,143 @@
+<!-- <div class="main">
+    <div class="container h-84 d-flex flex-column justify-content-evenly align-content-evenly">
+        <div class="row">
+            <div class="col-md-3">
+                <a routerLink="/LoanApplicationById">
+                    <div class="img">
+                    <img src="./assets/people.png" alt="">
+                    </div>
+                    <div class="p">
+                        <p>Find application by Loan Application Id</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a routerLink="/pull">
+                    <div class="img">
+                    <img src="./assets/peoples.png" alt="">
+                    </div>
+                    <div class="p">
+                        <p>Find applications by date</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a routerLink="/update" >
+                    <div class="img">
+                    <img src="./assets/update.png" alt="">
+                    </div>
+                    <div class="p">
+                        <p>Update Loan Application</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <a routerLink="/getallloanapplication" >
+                    <div class="img">
+                    <img src="./assets/sac.png" alt="">
+                    </div>
+                    <div class="p">
+                        <p>Sanction</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a routerLink="/emi">
+                    <div class="img">
+                    <img src="./assets/cal.png" alt="">
+                    </div>
+                    <div class="p">
+                        <p>Calculate EMI</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a routerLink="/getAllSanctionLoanApplications" >
+                    <div class="img">
+                    <img src="./assets/list.png" alt="">
+                    </div>
+                    <div class="p">
+                        <p>Payments Details List</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!--  -->
+<body>
+    <section>
+      <div class="row">
+        <div class="column" routerLink="/LoanApplicationById">
+          <div class="card">
+            <div class="icon-wrapper">
+              <fa-icon [icon]="faFolderOpen"></fa-icon>
+            </div>
+            <h3>loan Application</h3>
+            <p>
+              Find Specific loan application by loan application id
+            </p>
+          </div>
+        </div>
+        <div class="column" routerLink="/pull">
+          <div class="card">
+            <div class="icon-wrapper">
+              <fa-icon [icon]="faUsers"></fa-icon>
+            </div>
+            <h3>Find loan Applications</h3>
+            <p>
+              Find all loan application by loan application date
+            </p>
+          </div>
+        </div>
+        <div class="column" routerLink="/update">
+          <div class="card">
+            <div class="icon-wrapper">
+              <fa-icon [icon]="faPenNib"></fa-icon>
+            </div>
+            <h3>Update</h3>
+            <p>
+              Update loan application
+            </p>
+          </div>
+        </div>
+        <div class="column" routerLink="/getallloanapplication">
+          <div class="card">
+            <div class="icon-wrapper">
+              <fa-icon [icon]="faList"></fa-icon>
+            </div>
+            <h3>Sanction</h3>
+            <p>
+              Sanction loan applications
+            </p>
+          </div>
+        </div>
+        <div class="column" routerLink="/emi">
+          <div class="card">
+            <div class="icon-wrapper">
+              <fa-icon [icon]="faCalculator"></fa-icon>
+            </div>
+            <h3>Genarate Emi</h3>
+            <p>
+              Calculate Emi based on the given details
+            </p>
+          </div>
+        </div>
+        <div class="column" routerLink="/getAllSanctionLoanApplications">
+          <div class="card">
+            <div class="icon-wrapper">
+              <fa-icon [icon]="faFileInvoice"></fa-icon>
+            </div>
+            <h3>Installment payments</h3>
+            <p>
+              Installment lists for a loan application
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  &nbsp;
